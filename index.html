@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이랑 맘 홍보 표지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cover {
+            width: 210mm;
+            height: 297mm;
+            background: linear-gradient(135deg, #FFE5B4 0%, #FFCCCB 30%, #E6E6FA 70%, #B0E0E6 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.3)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.4)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.5)"/><circle cx="60" cy="10" r="1.2" fill="rgba(255,255,255,0.3)"/><circle cx="10" cy="60" r="0.8" fill="rgba(255,255,255,0.4)"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
+        .map-icon {
+            position: absolute;
+            top: 60px;
+            right: 80px;
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .play-icons {
+            position: absolute;
+            bottom: 80px;
+            left: 60px;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .main-title {
+            font-size: 72px;
+            font-weight: bold;
+            color: #2C3E50;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            color: #34495E;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .catchphrase {
+            font-size: 36px;
+            color: #E74C3C;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px 40px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: #7F8C8D;
+            line-height: 1.4;
+        }
+
+        .call-to-action {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .call-to-action:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .contact-info {
+            text-align: center;
+            color: #34495E;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px 30px;
+            border-radius: 15px;
+        }
+
+        .decorative-elements {
+            position: absolute;
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .element-1 {
+            top: 20%;
+            left: 10%;
+            animation: bounce 3s infinite;
+        }
+
+        .element-2 {
+            bottom: 30%;
+            right: 15%;
+            animation: bounce 3s infinite 1s;
+        }
+
+        .element-3 {
+            top: 70%;
+            left: 5%;
+            animation: bounce 3s infinite 2s;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover">
+        <!-- 장식 요소들 -->
+        <div class="decorative-elements element-1">🎈</div>
+        <div class="decorative-elements element-2">🎪</div>
+        <div class="decorative-elements element-3">🌳</div>
+        <div class="map-icon"></div>
+        <div class="play-icons">🎯🎨🏃‍♀️</div>
+
+        <!-- 메인 타이틀 -->
+        <div class="main-title"><img src=i-Rang_Mam_Logo.png></div>
+        
+
+        <!-- 캐치프레이즈 -->
+        <div class="catchphrase">
+            우리 아이와 함께 떠나는<br>
+            동네 놀이 보물찾기
+        </div>
+
+        <!-- 주요 기능 -->
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-title">숨겨진 놀이터 발견</div>
+                <div class="feature-desc">우리 동네 작은 공원부터 폐교까지 안전한 놀이 공간 정보</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">맞춤형 놀이 가이드</div>
+                <div class="feature-desc">연령대별 창의적이고 교육적인 놀이 방법 제안</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <div class="feature-title">전문가 놀이 프로그램</div>
+                <div class="feature-desc">계절별 특별 클래스와 테마 투어 참여</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🏘️</div>
+                <div class="feature-title">지역 연계 체험</div>
+                <div class="feature-desc">동네 소상공인과 함께하는 다양한 체험 활동</div>
+            </div>
+        </div>
+
+        <!-- 행동 유도 -->
+        <a href="https://www.instagram.com/@irangmam" class="call-to-action">
+            지금 바로 시작하기! 🚀
+        </a>
+
+        <!-- 연락처 정보 -->
+        <div class="contact-info">
+            📧 https://www.instagram.com/@irangmam/ | 📱 아이랑맘 |
+        </div>
+    </div>
+</body>
+</html>
